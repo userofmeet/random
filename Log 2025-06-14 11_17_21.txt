@@ -1,0 +1,2205 @@
+nRF Connect, 2025-06-14
+No name (FC:01:2C:D9:36:C2)
+V	11:16:00.972	Connecting to FC:01:2C:D9:36:C2...
+D	11:16:00.972	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:16:01.226	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	11:16:01.226	Connected to FC:01:2C:D9:36:C2
+V	11:16:01.256	Discovering services...
+D	11:16:01.256	gatt.discoverServices()
+I	11:16:01.702	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	11:16:01.963	[Callback] Services discovered with status: 0
+I	11:16:01.963	Services discovered
+V	11:16:01.980	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Server Supported Features [R] (0x2B3A)
+- Client Supported Features [R W] (0x2B29)
+Device Information (0x180A)
+- Analog [W] (0x2A58)
+- Analog Output [N R] (0x2A59)
+   Client Characteristic Configuration (0x2902)
+- Aggregate [N R] (0x2A5A)
+   Client Characteristic Configuration (0x2902)
+- CSC Feature [N R] (0x2A5C)
+   Client Characteristic Configuration (0x2902)
+- Sensor Location [N R] (0x2A5D)
+   Client Characteristic Configuration (0x2902)
+- CSC Measurement [W] (0x2A5B)
+- PLX Continuous Measurement [W] (0x2A5F)
+- PLX Features [N R] (0x2A60)
+   Client Characteristic Configuration (0x2902)
+- PLX Spot-Check Measurement [N R] (0x2A5E)
+   Client Characteristic Configuration (0x2902)
+D	11:16:01.980	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	11:16:01.983	gatt.setCharacteristicNotification(00002a59-0000-1000-8000-00805f9b34fb, true)
+D	11:16:01.986	gatt.setCharacteristicNotification(00002a5a-0000-1000-8000-00805f9b34fb, true)
+D	11:16:01.988	gatt.setCharacteristicNotification(00002a5c-0000-1000-8000-00805f9b34fb, true)
+D	11:16:01.989	gatt.setCharacteristicNotification(00002a5d-0000-1000-8000-00805f9b34fb, true)
+D	11:16:01.990	gatt.setCharacteristicNotification(00002a60-0000-1000-8000-00805f9b34fb, true)
+D	11:16:01.992	gatt.setCharacteristicNotification(00002a5e-0000-1000-8000-00805f9b34fb, true)
+I	11:16:02.049	Connection parameters updated (interval: 45.0ms, latency: 0, timeout: 5000ms)
+I	11:16:21.919	PHY updated (TX: LE 2M, RX: LE 2M)
+V	11:16:25.149	Writing request to characteristic 00002a5f-0000-1000-8000-00805f9b34fb
+D	11:16:25.149	gatt.writeCharacteristic(00002a5f-0000-1000-8000-00805f9b34fb, value=0x31)
+I	11:16:30.559	Data written to 00002a5f-0000-1000-8000-00805f9b34fb, value: (0x) 31, "1"
+A	11:16:30.559	"Invalid data syntax: (0x) 31, "1"" sent
+V	11:16:33.601	Enabling notifications for 00002a60-0000-1000-8000-00805f9b34fb
+D	11:16:33.601	gatt.setCharacteristicNotification(00002a60-0000-1000-8000-00805f9b34fb, true)
+D	11:16:33.604	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:33.684	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:33.684	"Notifications enabled" sent
+V	11:16:33.688	Notifications enabled for 00002a60-0000-1000-8000-00805f9b34fb
+V	11:16:46.422	Reading all characteristics...
+V	11:16:46.422	Reading characteristic 00002a00-0000-1000-8000-00805f9b34fb
+D	11:16:46.422	gatt.readCharacteristic(00002a00-0000-1000-8000-00805f9b34fb)
+I	11:16:46.511	Read Response received from 00002a00-0000-1000-8000-00805f9b34fb, value: (0x) 4D-4A, "MJ"
+A	11:16:46.511	"MJ" received
+V	11:16:46.512	Reading characteristic 00002a01-0000-1000-8000-00805f9b34fb
+D	11:16:46.512	gatt.readCharacteristic(00002a01-0000-1000-8000-00805f9b34fb)
+I	11:16:46.601	Read Response received from 00002a01-0000-1000-8000-00805f9b34fb, value: (0x) 00-00
+A	11:16:46.601	"[0] Unknown" received
+V	11:16:46.602	Reading characteristic 00002b3a-0000-1000-8000-00805f9b34fb
+D	11:16:46.602	gatt.readCharacteristic(00002b3a-0000-1000-8000-00805f9b34fb)
+I	11:16:46.692	Read Response received from 00002b3a-0000-1000-8000-00805f9b34fb, value: (0x) 00
+A	11:16:46.692	"(0x) 00" received
+V	11:16:46.694	Reading characteristic 00002b29-0000-1000-8000-00805f9b34fb
+D	11:16:46.694	gatt.readCharacteristic(00002b29-0000-1000-8000-00805f9b34fb)
+I	11:16:46.781	Read Response received from 00002b29-0000-1000-8000-00805f9b34fb, value: (0x) 00
+A	11:16:46.781	"No features" received
+V	11:16:46.782	Reading characteristic 00002a59-0000-1000-8000-00805f9b34fb
+D	11:16:46.782	gatt.readCharacteristic(00002a59-0000-1000-8000-00805f9b34fb)
+I	11:16:46.872	Read Response received from 00002a59-0000-1000-8000-00805f9b34fb, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-33, "11.1234,12.1233"
+A	11:16:46.872	"(0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-33, "11.1234,12.1233"" received
+V	11:16:46.873	Reading characteristic 00002a5a-0000-1000-8000-00805f9b34fb
+D	11:16:46.873	gatt.readCharacteristic(00002a5a-0000-1000-8000-00805f9b34fb)
+I	11:16:47.050	Read Response received from 00002a5a-0000-1000-8000-00805f9b34fb, value: (0x) 31-30-2E-39-33-00-00-00-00-00-00-00-98-EC-C9-3F-00-00-00-00-E0-D2-CA-3F-75-37-03-82-E0-5D-CB-3F
+A	11:16:47.050	"(0x) 31-30-2E-39-33-00-00-00-00-00-00-00-98-EC-C9-3F-00-00-00-00-E0-D2-CA-3F-75-37-03-82-E0-5D-CB-3F" received
+V	11:16:47.050	Reading characteristic 00002a5c-0000-1000-8000-00805f9b34fb
+D	11:16:47.050	gatt.readCharacteristic(00002a5c-0000-1000-8000-00805f9b34fb)
+I	11:16:47.229	Read Response received from 00002a5c-0000-1000-8000-00805f9b34fb, value: (0x) 30-2E-38-30-00-00-00-00-00-00-00-00-98-EC-C9-3F-00-00-00-00-E0-D2-CA-3F-75-37-03-82-E0-5D-CB-3F
+A	11:16:47.229	"Invalid value: (0x) 30-2E-38-30-00-00-00-00-00-00-00-00-98-EC-C9-3F-00-00-00-00-E0-D2-CA-3F-75-37-03-82-E0-5D-CB-3F" received
+V	11:16:47.234	Reading characteristic 00002a5d-0000-1000-8000-00805f9b34fb
+D	11:16:47.234	gatt.readCharacteristic(00002a5d-0000-1000-8000-00805f9b34fb)
+I	11:16:47.456	Read Response received from 00002a5d-0000-1000-8000-00805f9b34fb, value: (0x) 31-33-00-30-00-00-00-00-00-00-00-00-98-EC-C9-3F-00-00-00-00-E0-D2-CA-3F-75-37-03-82-E0-5D-CB-3F
+A	11:16:47.456	"Incorrect data length (1 byte expected): (0x) 31-33-00-30-00-00-00-00-00-00-00-00-98-EC-C9-3F-00-00-00-00-E0-D2-CA-3F-75-37-03-82-E0-5D-CB-3F" received
+V	11:16:47.456	Reading characteristic 00002a60-0000-1000-8000-00805f9b34fb
+D	11:16:47.457	gatt.readCharacteristic(00002a60-0000-1000-8000-00805f9b34fb)
+I	11:16:48.626	Read Response received from 00002a60-0000-1000-8000-00805f9b34fb, value: (0x) 33-34-36-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A-33-34-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-31-2C-30-2E-31-31-2C-2D-30-2E-39-34-0A
+A	11:16:48.626	"
+Supported Features: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Data for Demonstration
+ - Calibration Ongoing
+ - Measurement Unavailable
+Measurement Status Support: 
+ - RFU bits set
+ - Measurement Ongoing bit supported
+ - Data for Demonstration bit supported
+ - Data for Testing bit supported
+ - Measurement Unavailable bit supported
+Device and Sensor Status Support: 
+ - Equipment Malfunction Detected bit supported
+ - Poor Signal Detected bit supported
+ - Erratic Signal Detected bit supported
+ - Questionable Pulse Detected bit supported
+ - Sensor Interference Detected bit supported
+ - Sensor Displaced bit supported
+ - Sensor Malfunctioning bit supported
+ - RFU bits set" received
+V	11:16:48.627	Reading characteristic 00002a5e-0000-1000-8000-00805f9b34fb
+D	11:16:48.627	gatt.readCharacteristic(00002a5e-0000-1000-8000-00805f9b34fb)
+I	11:16:48.715	Read Response received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:48.715	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+V	11:16:48.716	10 characteristics read
+V	11:16:53.497	Enabling services...
+V	11:16:53.497	Enabling indications for 00002a05-0000-1000-8000-00805f9b34fb
+D	11:16:53.498	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	11:16:53.502	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0200)
+I	11:16:53.576	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 02-00
+A	11:16:53.576	"Indications enabled" sent
+V	11:16:53.585	Indications enabled for 00002a05-0000-1000-8000-00805f9b34fb
+V	11:16:53.585	Enabling notifications for 00002a59-0000-1000-8000-00805f9b34fb
+D	11:16:53.585	gatt.setCharacteristicNotification(00002a59-0000-1000-8000-00805f9b34fb, true)
+D	11:16:53.588	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:53.665	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:53.665	"Notifications enabled" sent
+V	11:16:53.669	Notifications enabled for 00002a59-0000-1000-8000-00805f9b34fb
+V	11:16:53.670	Enabling notifications for 00002a5a-0000-1000-8000-00805f9b34fb
+D	11:16:53.670	gatt.setCharacteristicNotification(00002a5a-0000-1000-8000-00805f9b34fb, true)
+D	11:16:53.672	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:53.755	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:53.755	"Notifications enabled" sent
+V	11:16:53.762	Notifications enabled for 00002a5a-0000-1000-8000-00805f9b34fb
+V	11:16:53.762	Enabling notifications for 00002a5c-0000-1000-8000-00805f9b34fb
+D	11:16:53.762	gatt.setCharacteristicNotification(00002a5c-0000-1000-8000-00805f9b34fb, true)
+D	11:16:53.764	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:53.845	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:53.845	"Notifications enabled" sent
+V	11:16:53.852	Notifications enabled for 00002a5c-0000-1000-8000-00805f9b34fb
+V	11:16:53.853	Enabling notifications for 00002a5d-0000-1000-8000-00805f9b34fb
+D	11:16:53.853	gatt.setCharacteristicNotification(00002a5d-0000-1000-8000-00805f9b34fb, true)
+D	11:16:53.857	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:53.936	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:53.936	"Notifications enabled" sent
+V	11:16:53.940	Notifications enabled for 00002a5d-0000-1000-8000-00805f9b34fb
+V	11:16:53.940	Enabling notifications for 00002a60-0000-1000-8000-00805f9b34fb
+D	11:16:53.941	gatt.setCharacteristicNotification(00002a60-0000-1000-8000-00805f9b34fb, true)
+D	11:16:53.945	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:54.026	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:54.026	"Notifications enabled" sent
+V	11:16:54.027	Notifications enabled for 00002a60-0000-1000-8000-00805f9b34fb
+V	11:16:54.028	Enabling notifications for 00002a5e-0000-1000-8000-00805f9b34fb
+D	11:16:54.028	gatt.setCharacteristicNotification(00002a5e-0000-1000-8000-00805f9b34fb, true)
+D	11:16:54.031	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:16:54.114	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:16:54.114	"Notifications enabled" sent
+V	11:16:54.121	Notifications enabled for 00002a5e-0000-1000-8000-00805f9b34fb
+V	11:16:54.121	All services enabled
+I	11:16:54.123	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:54.124	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:54.343	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:54.343	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:54.523	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:54.523	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:54.748	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:54.748	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:54.973	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:54.973	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:55.246	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:55.246	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:55.470	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:55.470	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:55.648	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:55.648	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:55.874	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:55.874	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:56.100	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:56.100	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:56.279	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:56.279	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:56.507	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:56.507	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:56.843	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:56.843	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:57.001	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:57.001	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:57.177	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:57.177	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:57.404	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:57.404	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:57.627	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:57.627	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:57.808	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:57.808	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:58.038	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:58.038	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:58.260	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:58.260	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:58.552	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:58.552	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:58.752	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:58.752	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:58.937	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:58.937	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+V	11:16:59.183	Beginning reliable write...
+D	11:16:59.183	gatt.beginReliableWrite()
+I	11:16:59.224	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:59.224	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:59.383	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:59.383	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:59.564	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:59.564	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:16:59.790	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:16:59.790	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:00.079	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:00.079	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:00.349	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:00.349	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:00.463	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:00.463	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:00.689	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:00.689	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:00.914	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:00.914	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:01.093	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:01.093	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:01.319	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:01.319	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:01.613	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:01.614	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:01.814	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:01.814	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:01.996	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:01.996	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:02.218	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:02.218	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:02.445	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:02.445	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:02.621	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:02.621	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:02.847	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:02.847	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:03.138	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:03.138	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:03.342	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:03.342	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:03.571	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:03.571	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:03.746	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:03.746	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:03.977	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:03.977	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:04.201	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:04.201	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:04.382	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:04.382	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:04.718	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:04.718	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:04.872	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:04.872	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:05.096	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:05.096	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:05.328	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:05.328	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:05.502	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:05.502	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:05.729	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:05.729	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:05.954	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:05.954	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:06.246	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:06.246	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:06.406	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:06.406	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:06.630	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:06.630	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:06.857	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:06.857	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:07.034	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:07.034	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:07.256	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:07.256	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:07.483	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:07.483	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:07.776	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:07.776	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:07.933	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:07.933	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:08.158	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:08.158	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:08.385	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:08.385	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:08.563	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:08.563	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:08.790	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:08.790	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:09.017	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:09.017	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:09.306	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:09.306	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:09.506	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:09.506	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:09.689	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:09.689	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:09.916	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:09.916	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:10.148	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:10.148	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:10.322	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:10.322	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:10.542	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:10.542	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:10.835	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:10.835	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:11.040	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:11.040	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:11.216	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:11.216	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:11.445	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:11.445	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:11.669	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:11.669	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:11.847	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:11.847	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:12.078	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:12.078	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:12.363	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:12.363	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:12.568	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:12.568	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:12.746	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:12.746	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:12.972	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:12.972	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:13.200	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:13.200	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:13.378	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:13.378	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:13.604	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:13.604	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:13.825	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:13.825	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:14.116	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:14.116	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:14.321	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:14.321	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:14.500	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:14.500	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:14.725	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:14.725	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:14.951	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:14.951	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:15.131	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:15.131	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:15.363	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:15.363	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:15.646	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:15.647	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:15.852	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:15.852	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:16.032	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:16.032	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:16.258	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:16.258	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:16.482	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:16.482	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:16.662	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:16.662	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:16.886	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:16.886	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:17.177	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:17.177	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:17.383	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:17.383	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:17.563	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:17.563	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:17.787	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:17.787	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:18.014	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:18.014	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:18.193	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:18.193	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:18.419	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:18.419	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:18.707	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:18.707	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:18.912	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:18.912	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:19.141	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:19.141	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:19.320	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:19.320	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:19.546	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:19.546	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:19.770	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:19.770	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:19.948	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:19.948	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:20.238	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:20.238	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:20.442	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:20.442	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:20.670	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:20.671	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:20.848	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:20.848	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:21.077	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:21.077	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:21.296	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:21.296	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:21.474	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:21.474	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:21.810	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:21.810	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:21.971	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:21.971	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:22.196	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:22.196	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:22.426	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:22.426	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:22.602	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:22.602	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:22.826	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:22.826	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:23.050	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:23.050	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:23.386	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:23.386	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:23.500	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:23.500	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:23.726	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:23.726	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:23.950	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:23.950	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:24.133	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:24.133	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:24.355	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:24.355	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:24.581	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:24.581	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:24.871	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:24.871	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:25.075	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:25.075	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:25.256	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:25.256	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:25.480	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:25.480	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received
+I	11:17:25.713	Notification received from 00002a5e-0000-1000-8000-00805f9b34fb, value: (0x) 52-65-73-74-69-6E-67, "Resting"
+A	11:17:25.713	"
+SpO2: 8689999872.00%
+PR: -1676000000.00 bpm
+Device clock not set
+Measurement Status: 
+ - RFU bits set
+ - Measurement Ongoing
+ - Early Estimated Data
+ - Fully Qualified Data
+ - Data from Measurement Storage
+ - Data for Demonstration
+ - Measurement Unavailable
+ - Questionable Measurement Detected" received

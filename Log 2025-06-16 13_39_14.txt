@@ -1,0 +1,980 @@
+nRF Connect, 2025-06-16
+MJ (FC:01:2C:D9:36:C2)
+V	13:36:04.745	Connecting to FC:01:2C:D9:36:C2...
+D	13:36:04.745	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	13:36:05.149	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	13:36:05.149	Connected to FC:01:2C:D9:36:C2
+V	13:36:05.186	Discovering services...
+D	13:36:05.186	gatt.discoverServices()
+D	13:36:05.188	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+I	13:36:05.607	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	13:36:05.990	[Callback] Services discovered with status: 0
+I	13:36:05.990	Services discovered
+V	13:36:06.015	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Server Supported Features [R] (0x2B3A)
+- Client Supported Features [R W] (0x2B29)
+Unknown Service (12345678-1234-5678-1234-56789abcdef0)
+- Unknown Characteristic [W] (12345678-1234-5678-1234-56789abcdef1)
+- Unknown Characteristic [N R] (12345678-1234-5678-1234-56789abcdef2)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (12345678-1234-5678-1234-56789abcdef3)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (12345678-1234-5678-1234-56789abcdef5)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (12345678-1234-5678-1234-56789abcdef6)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [W] (12345678-1234-5678-1234-56789abcdef4)
+- Unknown Characteristic [N R] (12345678-1234-5678-1234-56789abcdef7)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (12345678-1234-5678-1234-56789abcdef8)
+   Client Characteristic Configuration (0x2902)
+D	13:36:06.015	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	13:36:06.020	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef2, true)
+D	13:36:06.024	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef3, true)
+D	13:36:06.027	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef5, true)
+D	13:36:06.031	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef6, true)
+D	13:36:06.035	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef7, true)
+D	13:36:06.038	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef8, true)
+I	13:36:06.076	Connection parameters updated (interval: 45.0ms, latency: 0, timeout: 5000ms)
+V	13:36:30.601	Enabling notifications for 12345678-1234-5678-1234-56789abcdef8
+D	13:36:30.601	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef8, true)
+D	13:36:30.606	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	13:36:30.711	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	13:36:30.712	"Notifications enabled" sent
+V	13:36:30.719	Notifications enabled for 12345678-1234-5678-1234-56789abcdef8
+I	13:36:31.372	PHY updated (TX: LE 2M, RX: LE 2M)
+V	13:36:59.102	Writing request to characteristic 12345678-1234-5678-1234-56789abcdef4
+D	13:36:59.102	gatt.writeCharacteristic(12345678-1234-5678-1234-56789abcdef4, value=0x4C61627261646F722C352C302E36)
+I	13:37:01.151	Notification received from 12345678-1234-5678-1234-56789abcdef8, value: (0x) 33-37-2F-33-37-3A-2D-30-2E-39-0A-49-3A-4C-61-62-72-61-64-6F
+A	13:37:01.151	"(0x) 33-37-2F-33-37-3A-2D-30-2E-39-0A-49-3A-4C-61-62-72-61-64-6F" received
+I	13:37:01.153	Data written to 12345678-1234-5678-1234-56789abcdef4, value: (0x) 4C-61-62-72-61-64-6F-72-2C-35-2C-30-2E-36, "Labrador,5,0.6"
+A	13:37:01.153	"(0x) 4C-61-62-72-61-64-6F-72-2C-35-2C-30-2E-36, "Labrador,5,0.6"" sent
+V	13:37:21.404	Enabling notifications for 12345678-1234-5678-1234-56789abcdef7
+D	13:37:21.404	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef7, true)
+D	13:37:21.407	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	13:37:21.496	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	13:37:21.496	"Notifications enabled" sent
+V	13:37:21.503	Notifications enabled for 12345678-1234-5678-1234-56789abcdef7
+I	13:37:21.589	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:21.589	"(0x) 46, "F"" received
+I	13:37:21.858	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:21.858	"(0x) 46, "F"" received
+I	13:37:22.083	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:22.083	"(0x) 46, "F"" received
+I	13:37:22.402	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:22.402	"(0x) 46, "F"" received
+I	13:37:22.622	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:22.622	"(0x) 46, "F"" received
+I	13:37:22.914	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:22.914	"(0x) 46, "F"" received
+I	13:37:23.232	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:23.232	"(0x) 46, "F"" received
+I	13:37:23.436	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:23.436	"(0x) 46, "F"" received
+V	13:37:23.579	Enabling notifications for 12345678-1234-5678-1234-56789abcdef5
+D	13:37:23.579	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef5, true)
+D	13:37:23.583	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	13:37:23.656	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	13:37:23.656	"Notifications enabled" sent
+V	13:37:23.662	Notifications enabled for 12345678-1234-5678-1234-56789abcdef5
+I	13:37:23.751	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:23.751	"(0x) 46, "F"" received
+I	13:37:23.972	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:23.972	"(0x) 46, "F"" received
+I	13:37:24.245	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:24.245	"(0x) 46, "F"" received
+I	13:37:24.561	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:24.561	"(0x) 46, "F"" received
+I	13:37:24.850	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:24.850	"(0x) 46, "F"" received
+I	13:37:25.125	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:25.125	"(0x) 46, "F"" received
+V	13:37:25.317	Enabling notifications for 12345678-1234-5678-1234-56789abcdef6
+D	13:37:25.317	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef6, true)
+D	13:37:25.322	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	13:37:25.326	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:25.326	"(0x) 46, "F"" received
+I	13:37:25.412	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	13:37:25.412	"Notifications enabled" sent
+V	13:37:25.418	Notifications enabled for 12345678-1234-5678-1234-56789abcdef6
+I	13:37:25.592	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:25.592	"(0x) 46, "F"" received
+I	13:37:25.907	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:25.907	"(0x) 46, "F"" received
+I	13:37:26.133	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:26.133	"(0x) 46, "F"" received
+I	13:37:26.450	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:26.450	"(0x) 46, "F"" received
+V	13:37:26.460	Enabling notifications for 12345678-1234-5678-1234-56789abcdef3
+D	13:37:26.460	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef3, true)
+D	13:37:26.462	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	13:37:26.536	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	13:37:26.536	"Notifications enabled" sent
+V	13:37:26.543	Notifications enabled for 12345678-1234-5678-1234-56789abcdef3
+I	13:37:26.675	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:26.676	"(0x) 46, "F"" received
+I	13:37:26.943	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:26.943	"(0x) 46, "F"" received
+I	13:37:27.262	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:27.262	"(0x) 46, "F"" received
+V	13:37:27.363	Enabling notifications for 12345678-1234-5678-1234-56789abcdef2
+D	13:37:27.363	gatt.setCharacteristicNotification(12345678-1234-5678-1234-56789abcdef2, true)
+D	13:37:27.368	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	13:37:27.437	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	13:37:27.437	"Notifications enabled" sent
+V	13:37:27.441	Notifications enabled for 12345678-1234-5678-1234-56789abcdef2
+I	13:37:27.487	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:27.487	"(0x) 46, "F"" received
+I	13:37:27.797	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:27.797	"(0x) 46, "F"" received
+I	13:37:28.024	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:28.024	"(0x) 46, "F"" received
+I	13:37:28.293	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:28.293	"(0x) 46, "F"" received
+I	13:37:28.629	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:28.630	"(0x) 46, "F"" received
+I	13:37:28.833	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:28.833	"(0x) 46, "F"" received
+I	13:37:29.170	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:29.170	"(0x) 46, "F"" received
+I	13:37:29.373	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:29.373	"(0x) 46, "F"" received
+I	13:37:29.664	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:29.664	"(0x) 46, "F"" received
+I	13:37:29.978	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:29.978	"(0x) 46, "F"" received
+I	13:37:30.181	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:30.181	"(0x) 46, "F"" received
+I	13:37:30.520	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:30.520	"(0x) 46, "F"" received
+I	13:37:30.727	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:30.727	"(0x) 46, "F"" received
+I	13:37:31.018	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:31.018	"(0x) 46, "F"" received
+I	13:37:31.333	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:31.333	"(0x) 46, "F"" received
+I	13:37:31.535	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:31.535	"(0x) 46, "F"" received
+I	13:37:31.870	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:31.870	"(0x) 46, "F"" received
+I	13:37:32.074	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:32.074	"(0x) 46, "F"" received
+I	13:37:32.364	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:32.364	"(0x) 46, "F"" received
+I	13:37:32.680	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:32.680	"(0x) 46, "F"" received
+I	13:37:32.883	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:32.883	"(0x) 46, "F"" received
+I	13:37:33.220	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:33.220	"(0x) 46, "F"" received
+I	13:37:33.423	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:33.423	"(0x) 46, "F"" received
+I	13:37:33.713	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:33.713	"(0x) 46, "F"" received
+I	13:37:34.029	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:37:34.029	"(0x) 57, "W"" received
+I	13:37:34.235	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:37:34.235	"(0x) 57, "W"" received
+I	13:37:34.570	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:34.570	"(0x) 52, "R"" received
+I	13:37:34.774	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:34.774	"(0x) 52, "R"" received
+I	13:37:35.066	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:35.066	"(0x) 52, "R"" received
+I	13:37:35.378	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:35.379	"(0x) 52, "R"" received
+I	13:37:35.586	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:35.586	"(0x) 52, "R"" received
+I	13:37:35.918	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:35.918	"(0x) 52, "R"" received
+I	13:37:36.128	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:36.128	"(0x) 52, "R"" received
+I	13:37:36.418	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:36.418	"(0x) 52, "R"" received
+I	13:37:36.733	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:36.733	"(0x) 52, "R"" received
+I	13:37:36.934	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:36.934	"(0x) 52, "R"" received
+I	13:37:37.270	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:37.270	"(0x) 52, "R"" received
+I	13:37:37.479	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:37.479	"(0x) 52, "R"" received
+I	13:37:37.812	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:37.812	"(0x) 52, "R"" received
+I	13:37:38.127	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:38.128	"(0x) 52, "R"" received
+I	13:37:38.289	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:38.289	"(0x) 52, "R"" received
+I	13:37:38.623	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:38.623	"(0x) 52, "R"" received
+I	13:37:38.827	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:38.827	"(0x) 52, "R"" received
+I	13:37:39.160	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:39.160	"(0x) 52, "R"" received
+I	13:37:39.474	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:39.474	"(0x) 52, "R"" received
+I	13:37:39.636	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:39.637	"(0x) 52, "R"" received
+I	13:37:40.014	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:40.014	"(0x) 52, "R"" received
+I	13:37:40.219	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:40.219	"(0x) 52, "R"" received
+I	13:37:40.512	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:40.512	"(0x) 52, "R"" received
+I	13:37:40.828	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:40.828	"(0x) 52, "R"" received
+I	13:37:41.030	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:41.030	"(0x) 52, "R"" received
+I	13:37:41.320	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:41.320	"(0x) 52, "R"" received
+I	13:37:41.527	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:41.527	"(0x) 52, "R"" received
+I	13:37:41.861	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:41.861	"(0x) 52, "R"" received
+I	13:37:42.178	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:37:42.178	"(0x) 52, "R"" received
+I	13:37:42.379	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:37:42.379	"(0x) 57, "W"" received
+I	13:37:42.668	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:42.668	"(0x) 46, "F"" received
+I	13:37:42.877	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:42.877	"(0x) 46, "F"" received
+I	13:37:43.191	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:43.191	"(0x) 46, "F"" received
+I	13:37:43.503	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:43.503	"(0x) 46, "F"" received
+I	13:37:43.736	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:43.736	"(0x) 46, "F"" received
+I	13:37:44.002	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:44.002	"(0x) 46, "F"" received
+I	13:37:44.225	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:44.225	"(0x) 46, "F"" received
+I	13:37:44.561	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:44.561	"(0x) 46, "F"" received
+I	13:37:44.873	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:44.873	"(0x) 46, "F"" received
+I	13:37:45.080	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:45.080	"(0x) 46, "F"" received
+I	13:37:45.371	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:45.371	"(0x) 46, "F"" received
+I	13:37:45.574	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:45.574	"(0x) 46, "F"" received
+I	13:37:45.910	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:45.910	"(0x) 46, "F"" received
+I	13:37:46.225	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:46.225	"(0x) 46, "F"" received
+I	13:37:46.430	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:46.430	"(0x) 46, "F"" received
+I	13:37:46.722	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:46.722	"(0x) 46, "F"" received
+I	13:37:46.925	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:46.925	"(0x) 46, "F"" received
+I	13:37:47.262	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:47.262	"(0x) 46, "F"" received
+I	13:37:47.578	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:47.578	"(0x) 46, "F"" received
+I	13:37:47.779	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:47.779	"(0x) 46, "F"" received
+I	13:37:48.069	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:48.069	"(0x) 46, "F"" received
+I	13:37:48.276	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:48.276	"(0x) 46, "F"" received
+I	13:37:48.608	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:48.608	"(0x) 46, "F"" received
+I	13:37:48.927	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:48.927	"(0x) 46, "F"" received
+I	13:37:49.130	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:49.130	"(0x) 46, "F"" received
+I	13:37:49.422	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:49.422	"(0x) 46, "F"" received
+I	13:37:49.627	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:49.627	"(0x) 46, "F"" received
+I	13:37:49.959	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:49.959	"(0x) 46, "F"" received
+I	13:37:50.272	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:50.272	"(0x) 46, "F"" received
+I	13:37:50.478	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:50.478	"(0x) 46, "F"" received
+I	13:37:50.818	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:50.818	"(0x) 46, "F"" received
+I	13:37:51.017	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:51.017	"(0x) 46, "F"" received
+I	13:37:51.312	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:51.312	"(0x) 46, "F"" received
+I	13:37:51.626	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:51.626	"(0x) 46, "F"" received
+I	13:37:51.899	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:51.899	"(0x) 46, "F"" received
+I	13:37:52.167	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:52.167	"(0x) 46, "F"" received
+I	13:37:52.370	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:52.370	"(0x) 46, "F"" received
+I	13:37:52.660	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:52.660	"(0x) 46, "F"" received
+I	13:37:52.974	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:52.974	"(0x) 46, "F"" received
+I	13:37:53.179	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:53.179	"(0x) 46, "F"" received
+I	13:37:53.514	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:53.514	"(0x) 46, "F"" received
+I	13:37:53.717	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:53.717	"(0x) 46, "F"" received
+I	13:37:54.008	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:54.008	"(0x) 46, "F"" received
+I	13:37:54.324	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:54.324	"(0x) 46, "F"" received
+I	13:37:54.528	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:54.528	"(0x) 46, "F"" received
+I	13:37:54.866	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:54.866	"(0x) 46, "F"" received
+I	13:37:55.073	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:55.073	"(0x) 46, "F"" received
+I	13:37:55.359	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:55.360	"(0x) 46, "F"" received
+I	13:37:55.675	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:55.675	"(0x) 46, "F"" received
+I	13:37:55.882	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:55.882	"(0x) 46, "F"" received
+I	13:37:56.220	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:56.220	"(0x) 46, "F"" received
+I	13:37:56.419	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:56.419	"(0x) 46, "F"" received
+I	13:37:56.713	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:56.713	"(0x) 46, "F"" received
+I	13:37:57.023	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:57.023	"(0x) 46, "F"" received
+I	13:37:57.230	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:57.230	"(0x) 46, "F"" received
+I	13:37:57.564	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:57.564	"(0x) 46, "F"" received
+I	13:37:57.770	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:57.770	"(0x) 46, "F"" received
+I	13:37:58.062	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:58.062	"(0x) 46, "F"" received
+I	13:37:58.377	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:58.377	"(0x) 46, "F"" received
+I	13:37:58.578	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:58.578	"(0x) 46, "F"" received
+I	13:37:58.916	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:58.916	"(0x) 46, "F"" received
+I	13:37:59.123	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:59.123	"(0x) 46, "F"" received
+I	13:37:59.413	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:59.413	"(0x) 46, "F"" received
+I	13:37:59.724	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:59.724	"(0x) 46, "F"" received
+I	13:37:59.932	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:37:59.932	"(0x) 46, "F"" received
+I	13:38:00.264	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:00.264	"(0x) 46, "F"" received
+I	13:38:00.472	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:00.472	"(0x) 46, "F"" received
+I	13:38:00.759	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:00.759	"(0x) 46, "F"" received
+I	13:38:01.073	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:01.073	"(0x) 46, "F"" received
+I	13:38:01.281	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:01.281	"(0x) 46, "F"" received
+I	13:38:01.617	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:01.617	"(0x) 46, "F"" received
+I	13:38:01.819	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:01.819	"(0x) 46, "F"" received
+I	13:38:02.156	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:02.156	"(0x) 46, "F"" received
+I	13:38:02.429	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:02.429	"(0x) 46, "F"" received
+I	13:38:02.632	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:02.632	"(0x) 46, "F"" received
+I	13:38:02.965	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:02.965	"(0x) 46, "F"" received
+I	13:38:03.172	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:03.172	"(0x) 46, "F"" received
+I	13:38:03.458	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:03.458	"(0x) 46, "F"" received
+I	13:38:03.777	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:03.777	"(0x) 46, "F"" received
+I	13:38:03.980	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:03.980	"(0x) 46, "F"" received
+I	13:38:04.314	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:04.314	"(0x) 46, "F"" received
+I	13:38:04.521	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:04.521	"(0x) 46, "F"" received
+I	13:38:04.810	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:04.810	"(0x) 46, "F"" received
+I	13:38:05.124	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:05.124	"(0x) 46, "F"" received
+I	13:38:05.329	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:05.329	"(0x) 46, "F"" received
+I	13:38:05.667	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:05.667	"(0x) 46, "F"" received
+I	13:38:05.871	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:05.871	"(0x) 46, "F"" received
+I	13:38:06.159	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:06.159	"(0x) 46, "F"" received
+I	13:38:06.476	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:06.476	"(0x) 46, "F"" received
+I	13:38:06.681	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:06.681	"(0x) 46, "F"" received
+I	13:38:07.014	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:07.014	"(0x) 46, "F"" received
+I	13:38:07.218	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:07.218	"(0x) 46, "F"" received
+I	13:38:07.509	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:07.509	"(0x) 46, "F"" received
+I	13:38:07.870	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:07.870	"(0x) 46, "F"" received
+I	13:38:08.075	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:08.075	"(0x) 46, "F"" received
+I	13:38:08.368	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:08.368	"(0x) 46, "F"" received
+I	13:38:08.573	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:08.574	"(0x) 46, "F"" received
+I	13:38:08.863	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:08.863	"(0x) 57, "W"" received
+I	13:38:09.181	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:09.181	"(0x) 57, "W"" received
+I	13:38:09.383	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:09.383	"(0x) 57, "W"" received
+I	13:38:09.718	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:09.718	"(0x) 52, "R"" received
+I	13:38:09.921	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:09.921	"(0x) 52, "R"" received
+I	13:38:10.259	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:10.259	"(0x) 52, "R"" received
+I	13:38:10.528	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:10.528	"(0x) 52, "R"" received
+I	13:38:10.734	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:10.734	"(0x) 52, "R"" received
+I	13:38:11.067	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:11.067	"(0x) 52, "R"" received
+I	13:38:11.271	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:11.271	"(0x) 52, "R"" received
+I	13:38:11.609	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:11.609	"(0x) 52, "R"" received
+I	13:38:11.877	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:11.877	"(0x) 52, "R"" received
+I	13:38:12.079	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:12.079	"(0x) 52, "R"" received
+I	13:38:12.413	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:12.414	"(0x) 52, "R"" received
+I	13:38:12.618	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:12.618	"(0x) 52, "R"" received
+I	13:38:12.954	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:12.954	"(0x) 52, "R"" received
+I	13:38:13.224	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:13.224	"(0x) 52, "R"" received
+I	13:38:13.495	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:13.495	"(0x) 52, "R"" received
+I	13:38:13.766	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:13.766	"(0x) 52, "R"" received
+I	13:38:13.967	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:13.967	"(0x) 52, "R"" received
+I	13:38:14.307	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:14.307	"(0x) 52, "R"" received
+I	13:38:14.621	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:14.621	"(0x) 52, "R"" received
+I	13:38:14.826	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:14.826	"(0x) 52, "R"" received
+I	13:38:15.161	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:15.161	"(0x) 52, "R"" received
+I	13:38:15.367	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:15.367	"(0x) 52, "R"" received
+I	13:38:15.660	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:15.660	"(0x) 52, "R"" received
+I	13:38:15.977	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:15.977	"(0x) 52, "R"" received
+I	13:38:16.180	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:38:16.180	"(0x) 52, "R"" received
+I	13:38:16.512	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:16.512	"(0x) 57, "W"" received
+I	13:38:16.719	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:16.719	"(0x) 57, "W"" received
+I	13:38:17.003	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:17.003	"(0x) 46, "F"" received
+I	13:38:17.320	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:17.320	"(0x) 46, "F"" received
+I	13:38:17.528	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:17.528	"(0x) 46, "F"" received
+I	13:38:17.864	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:17.864	"(0x) 46, "F"" received
+I	13:38:18.063	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:18.063	"(0x) 46, "F"" received
+I	13:38:18.357	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:18.357	"(0x) 46, "F"" received
+I	13:38:18.670	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:18.670	"(0x) 46, "F"" received
+I	13:38:18.879	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:18.879	"(0x) 46, "F"" received
+I	13:38:19.255	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:19.255	"(0x) 46, "F"" received
+I	13:38:19.414	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:19.414	"(0x) 46, "F"" received
+I	13:38:19.752	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:19.752	"(0x) 46, "F"" received
+I	13:38:20.021	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:20.022	"(0x) 46, "F"" received
+I	13:38:20.224	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:20.224	"(0x) 46, "F"" received
+I	13:38:20.559	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:20.559	"(0x) 46, "F"" received
+I	13:38:20.766	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:20.766	"(0x) 57, "W"" received
+I	13:38:21.056	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:21.056	"(0x) 57, "W"" received
+I	13:38:21.372	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:21.372	"(0x) 57, "W"" received
+I	13:38:21.576	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:21.576	"(0x) 57, "W"" received
+I	13:38:21.913	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:21.913	"(0x) 57, "W"" received
+I	13:38:22.115	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:22.115	"(0x) 57, "W"" received
+I	13:38:22.404	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:22.404	"(0x) 57, "W"" received
+I	13:38:22.717	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:22.717	"(0x) 57, "W"" received
+I	13:38:22.925	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:22.925	"(0x) 57, "W"" received
+I	13:38:23.262	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:23.262	"(0x) 57, "W"" received
+I	13:38:23.463	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:23.463	"(0x) 57, "W"" received
+I	13:38:23.756	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:23.756	"(0x) 57, "W"" received
+I	13:38:24.071	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:24.071	"(0x) 57, "W"" received
+I	13:38:24.275	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:24.275	"(0x) 57, "W"" received
+I	13:38:24.609	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:24.609	"(0x) 57, "W"" received
+I	13:38:24.812	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:24.812	"(0x) 57, "W"" received
+I	13:38:25.150	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:25.150	"(0x) 57, "W"" received
+I	13:38:25.463	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:25.463	"(0x) 57, "W"" received
+I	13:38:25.622	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:25.622	"(0x) 57, "W"" received
+I	13:38:25.958	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:25.958	"(0x) 57, "W"" received
+I	13:38:26.164	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:26.164	"(0x) 57, "W"" received
+I	13:38:26.544	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:26.544	"(0x) 57, "W"" received
+I	13:38:26.818	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:26.818	"(0x) 57, "W"" received
+I	13:38:27.020	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:27.021	"(0x) 57, "W"" received
+I	13:38:27.310	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:38:27.310	"(0x) 57, "W"" received
+I	13:38:27.518	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:27.518	"(0x) 46, "F"" received
+I	13:38:27.850	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:27.850	"(0x) 46, "F"" received
+I	13:38:28.166	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:28.166	"(0x) 46, "F"" received
+I	13:38:28.370	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:28.370	"(0x) 46, "F"" received
+I	13:38:28.663	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:28.663	"(0x) 46, "F"" received
+I	13:38:28.863	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:28.863	"(0x) 46, "F"" received
+I	13:38:29.200	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:29.200	"(0x) 46, "F"" received
+I	13:38:29.515	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:29.515	"(0x) 46, "F"" received
+I	13:38:29.719	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:29.719	"(0x) 46, "F"" received
+I	13:38:30.053	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:30.053	"(0x) 46, "F"" received
+I	13:38:30.256	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:30.256	"(0x) 46, "F"" received
+I	13:38:30.549	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:30.549	"(0x) 46, "F"" received
+I	13:38:30.911	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:30.911	"(0x) 46, "F"" received
+I	13:38:31.115	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:31.115	"(0x) 46, "F"" received
+I	13:38:31.407	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:31.407	"(0x) 46, "F"" received
+I	13:38:31.609	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:31.609	"(0x) 46, "F"" received
+I	13:38:31.899	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:31.899	"(0x) 46, "F"" received
+I	13:38:32.220	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:32.220	"(0x) 46, "F"" received
+I	13:38:32.419	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:32.419	"(0x) 46, "F"" received
+I	13:38:32.756	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:32.756	"(0x) 46, "F"" received
+I	13:38:32.958	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:32.958	"(0x) 46, "F"" received
+I	13:38:33.249	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:33.249	"(0x) 46, "F"" received
+I	13:38:33.566	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:33.566	"(0x) 46, "F"" received
+I	13:38:33.768	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:33.768	"(0x) 46, "F"" received
+I	13:38:34.103	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:34.103	"(0x) 46, "F"" received
+I	13:38:34.308	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:34.308	"(0x) 46, "F"" received
+I	13:38:34.601	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:34.601	"(0x) 46, "F"" received
+I	13:38:34.917	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:34.918	"(0x) 46, "F"" received
+I	13:38:35.119	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:35.119	"(0x) 46, "F"" received
+I	13:38:35.498	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:35.498	"(0x) 46, "F"" received
+I	13:38:35.659	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:35.659	"(0x) 46, "F"" received
+I	13:38:35.952	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:35.952	"(0x) 46, "F"" received
+I	13:38:36.267	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:36.267	"(0x) 46, "F"" received
+I	13:38:36.468	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:36.468	"(0x) 46, "F"" received
+V	13:38:36.563	Writing request to characteristic 12345678-1234-5678-1234-56789abcdef1
+D	13:38:36.563	gatt.writeCharacteristic(12345678-1234-5678-1234-56789abcdef1, value=0x31322E333334342C32332E34343535)
+I	13:38:38.744	Notification received from 12345678-1234-5678-1234-56789abcdef2, value: (0x) 31-32-2E-33-33-34-34-2C-32-33-2E-34-34-35-35, "12.3344,23.4455"
+A	13:38:38.744	"(0x) 31-32-2E-33-33-34-34-2C-32-33-2E-34-34-35-35, "12.3344,23.4455"" received
+I	13:38:38.745	Data written to 12345678-1234-5678-1234-56789abcdef1, value: (0x) 31-32-2E-33-33-34-34-2C-32-33-2E-34-34-35-35, "12.3344,23.4455"
+A	13:38:38.745	"(0x) 31-32-2E-33-33-34-34-2C-32-33-2E-34-34-35-35, "12.3344,23.4455"" sent
+I	13:38:38.750	Notification received from 12345678-1234-5678-1234-56789abcdef3, value: (0x) 30-2E-30-30-00-6F-05-40-FF-FF-FF-FF-01-BB-37-40-23-0A-06-00
+A	13:38:38.750	"(0x) 30-2E-30-30-00-6F-05-40-FF-FF-FF-FF-01-BB-37-40-23-0A-06-00" received
+I	13:38:38.751	Notification received from 12345678-1234-5678-1234-56789abcdef5, value: (0x) 30-2E-30-30-00-6F-05-40-FF-FF-FF-FF-01-BB-37-40-23-0A-06-00
+A	13:38:38.751	"(0x) 30-2E-30-30-00-6F-05-40-FF-FF-FF-FF-01-BB-37-40-23-0A-06-00" received
+I	13:38:38.774	Notification received from 12345678-1234-5678-1234-56789abcdef6, value: (0x) 30-00-30-30-00-6F-05-40-FF-FF-FF-FF-01-BB-37-40-23-0A-06-00
+A	13:38:38.774	"(0x) 30-00-30-30-00-6F-05-40-FF-FF-FF-FF-01-BB-37-40-23-0A-06-00" received
+I	13:38:38.776	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:38.776	"(0x) 46, "F"" received
+I	13:38:38.779	Notification received from 12345678-1234-5678-1234-56789abcdef8, value: (0x) 33-38-2F-33-38-3A-0A
+A	13:38:38.779	"(0x) 33-38-2F-33-38-3A-0A" received
+I	13:38:38.781	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:38.781	"(0x) 46, "F"" received
+I	13:38:38.989	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:38.989	"(0x) 46, "F"" received
+I	13:38:39.220	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:39.220	"(0x) 46, "F"" received
+I	13:38:39.395	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:39.395	"(0x) 46, "F"" received
+I	13:38:39.732	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:39.732	"(0x) 46, "F"" received
+I	13:38:39.933	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:39.933	"(0x) 46, "F"" received
+I	13:38:40.115	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:40.115	"(0x) 46, "F"" received
+I	13:38:40.340	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:40.340	"(0x) 46, "F"" received
+I	13:38:40.565	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:40.565	"(0x) 46, "F"" received
+I	13:38:40.855	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:40.856	"(0x) 46, "F"" received
+I	13:38:41.056	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:41.056	"(0x) 46, "F"" received
+I	13:38:41.237	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:41.237	"(0x) 46, "F"" received
+I	13:38:41.462	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:41.462	"(0x) 46, "F"" received
+I	13:38:41.688	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:41.688	"(0x) 46, "F"" received
+I	13:38:41.976	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:41.976	"(0x) 46, "F"" received
+I	13:38:42.181	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:42.181	"(0x) 46, "F"" received
+I	13:38:42.406	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:42.406	"(0x) 46, "F"" received
+I	13:38:42.632	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:42.632	"(0x) 46, "F"" received
+I	13:38:42.921	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:42.921	"(0x) 46, "F"" received
+I	13:38:43.129	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:43.129	"(0x) 46, "F"" received
+I	13:38:43.354	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:43.354	"(0x) 46, "F"" received
+I	13:38:43.669	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:43.669	"(0x) 46, "F"" received
+I	13:38:43.849	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:43.849	"(0x) 46, "F"" received
+I	13:38:44.073	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:44.073	"(0x) 46, "F"" received
+I	13:38:44.388	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:44.388	"(0x) 46, "F"" received
+I	13:38:44.570	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:44.570	"(0x) 46, "F"" received
+I	13:38:44.861	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:44.861	"(0x) 46, "F"" received
+I	13:38:45.130	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:45.130	"(0x) 46, "F"" received
+I	13:38:45.335	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:45.335	"(0x) 46, "F"" received
+I	13:38:45.555	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:45.555	"(0x) 46, "F"" received
+I	13:38:45.850	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:45.850	"(0x) 46, "F"" received
+I	13:38:46.053	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:46.053	"(0x) 46, "F"" received
+I	13:38:46.388	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:46.388	"(0x) 46, "F"" received
+I	13:38:46.547	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:46.547	"(0x) 46, "F"" received
+I	13:38:46.883	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:46.883	"(0x) 46, "F"" received
+I	13:38:47.087	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:47.087	"(0x) 46, "F"" received
+I	13:38:47.423	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:47.423	"(0x) 46, "F"" received
+I	13:38:47.632	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:47.632	"(0x) 46, "F"" received
+I	13:38:48.010	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:48.010	"(0x) 46, "F"" received
+I	13:38:48.125	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:48.125	"(0x) 46, "F"" received
+I	13:38:48.463	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:48.463	"(0x) 46, "F"" received
+I	13:38:48.667	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:48.667	"(0x) 46, "F"" received
+I	13:38:48.892	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:48.892	"(0x) 46, "F"" received
+I	13:38:49.178	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:49.178	"(0x) 46, "F"" received
+I	13:38:49.387	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:49.387	"(0x) 46, "F"" received
+I	13:38:49.722	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:49.722	"(0x) 46, "F"" received
+I	13:38:49.993	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:49.993	"(0x) 46, "F"" received
+I	13:38:50.194	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:50.194	"(0x) 46, "F"" received
+I	13:38:50.534	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:50.534	"(0x) 46, "F"" received
+I	13:38:50.732	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:50.732	"(0x) 46, "F"" received
+I	13:38:51.075	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:51.075	"(0x) 46, "F"" received
+I	13:38:51.340	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:51.340	"(0x) 46, "F"" received
+I	13:38:51.547	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:51.547	"(0x) 46, "F"" received
+I	13:38:51.923	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:51.923	"(0x) 46, "F"" received
+I	13:38:52.086	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:52.086	"(0x) 46, "F"" received
+I	13:38:52.374	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:52.374	"(0x) 46, "F"" received
+I	13:38:52.691	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:52.691	"(0x) 46, "F"" received
+I	13:38:52.896	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:52.896	"(0x) 46, "F"" received
+I	13:38:53.231	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:53.231	"(0x) 46, "F"" received
+I	13:38:53.434	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:53.434	"(0x) 46, "F"" received
+I	13:38:53.723	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:53.723	"(0x) 46, "F"" received
+I	13:38:54.042	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:54.042	"(0x) 46, "F"" received
+I	13:38:54.244	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:54.244	"(0x) 46, "F"" received
+I	13:38:54.580	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:54.580	"(0x) 46, "F"" received
+I	13:38:54.785	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:54.785	"(0x) 46, "F"" received
+I	13:38:55.077	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:55.077	"(0x) 46, "F"" received
+I	13:38:55.393	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:55.393	"(0x) 46, "F"" received
+V	13:38:55.551	Writing request to characteristic 12345678-1234-5678-1234-56789abcdef1
+D	13:38:55.551	gatt.writeCharacteristic(12345678-1234-5678-1234-56789abcdef1, value=0x31322E333334342C32332E33333435)
+I	13:38:55.593	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:55.593	"(0x) 46, "F"" received
+I	13:38:57.685	Notification received from 12345678-1234-5678-1234-56789abcdef2, value: (0x) 31-32-2E-33-33-34-34-2C-32-33-2E-33-33-34-35, "12.3344,23.3345"
+A	13:38:57.685	"(0x) 31-32-2E-33-33-34-34-2C-32-33-2E-33-33-34-35, "12.3344,23.3345"" received
+I	13:38:57.685	Data written to 12345678-1234-5678-1234-56789abcdef1, value: (0x) 31-32-2E-33-33-34-34-2C-32-33-2E-33-33-34-35, "12.3344,23.3345"
+A	13:38:57.685	"(0x) 31-32-2E-33-33-34-34-2C-32-33-2E-33-33-34-35, "12.3344,23.3345"" sent
+I	13:38:57.686	Notification received from 12345678-1234-5678-1234-56789abcdef3, value: (0x) 31-32-30-35-37-2E-37-34-00-FF-FF-FF-01-BB-37-40-23-0A-06-00
+A	13:38:57.686	"(0x) 31-32-30-35-37-2E-37-34-00-FF-FF-FF-01-BB-37-40-23-0A-06-00" received
+I	13:38:57.689	Notification received from 12345678-1234-5678-1234-56789abcdef5, value: (0x) 36-33-35-2E-37-32-00-34-00-FF-FF-FF-01-BB-37-40-23-0A-06-00
+A	13:38:57.689	"(0x) 36-33-35-2E-37-32-00-34-00-FF-FF-FF-01-BB-37-40-23-0A-06-00" received
+I	13:38:57.707	Notification received from 12345678-1234-5678-1234-56789abcdef6, value: (0x) 31-33-33-39-37-00-00-34-00-FF-FF-FF-01-BB-37-40-23-0A-06-00
+A	13:38:57.707	"(0x) 31-33-33-39-37-00-00-34-00-FF-FF-FF-01-BB-37-40-23-0A-06-00" received
+I	13:38:57.707	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:57.707	"(0x) 46, "F"" received
+I	13:38:57.713	Notification received from 12345678-1234-5678-1234-56789abcdef8, value: (0x) 33-37-2F-33-37-3A-2D-30-2E-39-0A-43-3A-31-32-2E-33-2C-32-33
+A	13:38:57.713	"(0x) 33-37-2F-33-37-3A-2D-30-2E-39-0A-43-3A-31-32-2E-33-2C-32-33" received
+I	13:38:57.714	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:57.714	"(0x) 46, "F"" received
+I	13:38:57.934	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:57.934	"(0x) 46, "F"" received
+I	13:38:58.273	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:58.273	"(0x) 46, "F"" received
+I	13:38:58.428	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:58.428	"(0x) 46, "F"" received
+I	13:38:58.653	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:58.653	"(0x) 46, "F"" received
+I	13:38:58.878	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:58.878	"(0x) 46, "F"" received
+I	13:38:59.059	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:59.059	"(0x) 46, "F"" received
+I	13:38:59.394	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:59.394	"(0x) 46, "F"" received
+I	13:38:59.553	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:59.553	"(0x) 46, "F"" received
+I	13:38:59.777	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:38:59.777	"(0x) 46, "F"" received
+I	13:39:00.004	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:00.004	"(0x) 46, "F"" received
+I	13:39:00.182	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:00.182	"(0x) 46, "F"" received
+I	13:39:00.519	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:00.519	"(0x) 46, "F"" received
+I	13:39:00.724	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:00.724	"(0x) 46, "F"" received
+I	13:39:00.902	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:00.902	"(0x) 46, "F"" received
+I	13:39:01.129	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:01.129	"(0x) 46, "F"" received
+I	13:39:01.464	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:01.464	"(0x) 46, "F"" received
+I	13:39:01.623	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:01.623	"(0x) 46, "F"" received
+I	13:39:01.848	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:01.848	"(0x) 57, "W"" received
+I	13:39:02.184	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:02.184	"(0x) 57, "W"" received
+I	13:39:02.388	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:02.388	"(0x) 52, "R"" received
+I	13:39:02.613	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:02.613	"(0x) 52, "R"" received
+I	13:39:02.905	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:02.905	"(0x) 52, "R"" received
+I	13:39:03.112	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:03.112	"(0x) 52, "R"" received
+I	13:39:03.332	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:03.332	"(0x) 52, "R"" received
+I	13:39:03.623	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:03.623	"(0x) 52, "R"" received
+I	13:39:03.827	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:03.827	"(0x) 52, "R"" received
+I	13:39:04.054	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:04.054	"(0x) 52, "R"" received
+I	13:39:04.389	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:04.389	"(0x) 52, "R"" received
+I	13:39:04.592	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:04.592	"(0x) 52, "R"" received
+I	13:39:04.885	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:04.885	"(0x) 52, "R"" received
+I	13:39:05.088	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:05.088	"(0x) 52, "R"" received
+I	13:39:05.318	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:05.318	"(0x) 52, "R"" received
+I	13:39:05.649	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:05.649	"(0x) 52, "R"" received
+I	13:39:05.811	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:05.811	"(0x) 57, "W"" received
+I	13:39:06.144	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:06.144	"(0x) 57, "W"" received
+I	13:39:06.348	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:06.349	"(0x) 57, "W"" received
+I	13:39:06.687	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:06.688	"(0x) 57, "W"" received
+I	13:39:06.888	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:06.888	"(0x) 57, "W"" received
+I	13:39:07.183	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:07.183	"(0x) 57, "W"" received
+I	13:39:07.386	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:07.386	"(0x) 57, "W"" received
+I	13:39:07.719	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:07.719	"(0x) 57, "W"" received
+I	13:39:07.991	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:07.991	"(0x) 57, "W"" received
+I	13:39:08.311	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:08.311	"(0x) 57, "W"" received
+I	13:39:08.466	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:08.466	"(0x) 57, "W"" received
+I	13:39:08.799	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:08.799	"(0x) 57, "W"" received
+I	13:39:09.003	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:09.003	"(0x) 57, "W"" received
+I	13:39:09.299	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:09.299	"(0x) 57, "W"" received
+I	13:39:09.608	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:09.608	"(0x) 57, "W"" received
+I	13:39:09.816	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:09.816	"(0x) 57, "W"" received
+I	13:39:10.152	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 52, "R"
+A	13:39:10.152	"(0x) 52, "R"" received
+I	13:39:10.357	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:10.357	"(0x) 57, "W"" received
+I	13:39:10.644	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:10.644	"(0x) 57, "W"" received
+I	13:39:10.960	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:10.960	"(0x) 57, "W"" received
+I	13:39:11.167	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:11.167	"(0x) 57, "W"" received
+I	13:39:11.500	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:11.500	"(0x) 57, "W"" received
+I	13:39:11.771	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:11.771	"(0x) 57, "W"" received
+I	13:39:11.974	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:11.974	"(0x) 57, "W"" received
+I	13:39:12.310	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 57, "W"
+A	13:39:12.310	"(0x) 57, "W"" received
+I	13:39:12.514	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:12.514	"(0x) 46, "F"" received
+I	13:39:12.849	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:12.849	"(0x) 46, "F"" received
+I	13:39:13.053	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:13.053	"(0x) 46, "F"" received
+I	13:39:13.346	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:13.346	"(0x) 46, "F"" received
+I	13:39:13.661	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:13.661	"(0x) 46, "F"" received
+I	13:39:13.864	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:13.864	"(0x) 46, "F"" received
+I	13:39:14.202	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:14.202	"(0x) 46, "F"" received
+I	13:39:14.401	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:14.401	"(0x) 46, "F"" received
+I	13:39:14.691	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:14.691	"(0x) 46, "F"" received
+I	13:39:15.009	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:15.009	"(0x) 46, "F"" received
+I	13:39:15.211	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:15.211	"(0x) 46, "F"" received
+I	13:39:15.548	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:15.548	"(0x) 46, "F"" received
+I	13:39:15.753	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:15.753	"(0x) 46, "F"" received
+I	13:39:16.043	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:16.043	"(0x) 46, "F"" received
+I	13:39:16.362	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:16.362	"(0x) 46, "F"" received
+I	13:39:16.565	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:16.565	"(0x) 46, "F"" received
+I	13:39:16.904	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:16.904	"(0x) 46, "F"" received
+I	13:39:17.103	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:17.103	"(0x) 46, "F"" received
+I	13:39:17.391	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:17.391	"(0x) 46, "F"" received
+I	13:39:17.706	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:17.706	"(0x) 46, "F"" received
+I	13:39:17.914	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:17.914	"(0x) 46, "F"" received
+I	13:39:18.253	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:18.253	"(0x) 46, "F"" received
+I	13:39:18.459	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:18.460	"(0x) 46, "F"" received
+I	13:39:18.751	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:18.751	"(0x) 46, "F"" received
+I	13:39:19.059	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:19.059	"(0x) 46, "F"" received
+I	13:39:19.267	Notification received from 12345678-1234-5678-1234-56789abcdef7, value: (0x) 46, "F"
+A	13:39:19.267	"(0x) 46, "F"" received

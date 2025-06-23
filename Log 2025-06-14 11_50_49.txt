@@ -1,0 +1,89 @@
+nRF Connect, 2025-06-14
+No name (FC:01:2C:D9:36:C2)
+V	11:47:49.040	Connecting to FC:01:2C:D9:36:C2...
+D	11:47:49.040	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:47:49.393	[Callback] Connection state changed with status: 62 and new state: DISCONNECTED (0)
+E	11:47:49.394	Error 62 (0x3e): GATT CONN FAIL ESTABLISH
+I	11:47:49.394	Disconnected
+D	11:47:50.912	gatt.close()
+D	11:47:50.917	wait(200)
+V	11:47:51.120	Connecting to FC:01:2C:D9:36:C2...
+D	11:47:51.121	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:47:51.330	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	11:47:51.330	Connected to FC:01:2C:D9:36:C2
+V	11:47:51.343	Discovering services...
+D	11:47:51.343	gatt.discoverServices()
+I	11:47:51.806	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	11:47:52.211	[Callback] Services discovered with status: 0
+I	11:47:52.211	Services discovered
+V	11:47:52.229	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Server Supported Features [R] (0x2B3A)
+- Client Supported Features [R W] (0x2B29)
+Nordic UART Service (6e400001-b5a3-f393-e0a9-e50e24dcca9e)
+- RX Characteristic [W] (6e400002-b5a3-f393-e0a9-e50e24dcca9e)
+- TX Characteristic [N R] (6e400003-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400004-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400005-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400006-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [W] (6e40000a-b5a3-f393-e0a9-e50e24dcca9e)
+- Unknown Characteristic [W] (6e400008-b5a3-f393-e0a9-e50e24dcca9e)
+- Unknown Characteristic [N R] (6e400009-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400007-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+D	11:47:52.229	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	11:47:52.234	gatt.setCharacteristicNotification(6e400003-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:47:52.237	gatt.setCharacteristicNotification(6e400004-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:47:52.242	gatt.setCharacteristicNotification(6e400005-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:47:52.245	gatt.setCharacteristicNotification(6e400006-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:47:52.249	gatt.setCharacteristicNotification(6e400009-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:47:52.252	gatt.setCharacteristicNotification(6e400007-b5a3-f393-e0a9-e50e24dcca9e, true)
+I	11:47:52.295	Connection parameters updated (interval: 45.0ms, latency: 0, timeout: 5000ms)
+V	11:48:20.076	Writing request to characteristic 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+D	11:48:20.076	gatt.writeCharacteristic(6e40000a-b5a3-f393-e0a9-e50e24dcca9e, value=0x42756C6C646F672C312C302E3131)
+I	11:48:20.157	Data written to 6e40000a-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 42-75-6C-6C-64-6F-67-2C-31-2C-30-2E-31-31, "Bulldog,1,0.11"
+A	11:48:20.157	"(0x) 42-75-6C-6C-64-6F-67-2C-31-2C-30-2E-31-31, "Bulldog,1,0.11"" sent
+V	11:48:45.186	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:48:45.186	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323334)
+I	11:48:45.258	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-34, "11.1234,12.1234"
+A	11:48:45.258	"11.1234,12.1234" sent
+V	11:49:03.235	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:49:03.235	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323333)
+I	11:49:03.303	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-33, "11.1234,12.1233"
+A	11:49:03.303	"11.1234,12.1233" sent
+I	11:49:05.618	PHY updated (TX: LE 2M, RX: LE 2M)
+V	11:49:22.545	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:49:22.545	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323334)
+I	11:49:22.607	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-34, "11.1234,12.1234"
+A	11:49:22.607	"11.1234,12.1234" sent
+V	11:49:30.851	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:49:30.851	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233332C31322E31323334)
+I	11:49:30.931	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-33-2C-31-32-2E-31-32-33-34, "11.1233,12.1234"
+A	11:49:30.931	"11.1233,12.1234" sent
+V	11:49:38.388	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:49:38.388	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323334)
+I	11:49:38.448	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-34, "11.1234,12.1234"
+A	11:49:38.448	"11.1234,12.1234" sent
+V	11:49:42.047	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:49:42.047	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323334)
+I	11:49:42.138	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-34, "11.1234,12.1234"
+A	11:49:42.138	"11.1234,12.1234" sent
+V	11:50:28.675	Writing request to characteristic 6e400008-b5a3-f393-e0a9-e50e24dcca9e
+D	11:50:28.675	gatt.writeCharacteristic(6e400008-b5a3-f393-e0a9-e50e24dcca9e, value=0x31)
+I	11:50:40.347	Data written to 6e400008-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31, "1"
+A	11:50:40.347	"(0x) 31, "1"" sent
+V	11:50:44.797	Enabling notifications for 6e400009-b5a3-f393-e0a9-e50e24dcca9e
+D	11:50:44.797	gatt.setCharacteristicNotification(6e400009-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:50:44.801	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:50:44.923	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:50:44.923	"Notifications enabled" sent
+V	11:50:44.929	Notifications enabled for 6e400009-b5a3-f393-e0a9-e50e24dcca9e

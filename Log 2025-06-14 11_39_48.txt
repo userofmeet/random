@@ -1,0 +1,119 @@
+nRF Connect, 2025-06-14
+No name (FC:01:2C:D9:36:C2)
+V	11:32:58.943	Connecting to FC:01:2C:D9:36:C2...
+D	11:32:58.943	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:32:59.232	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	11:32:59.232	Connected to FC:01:2C:D9:36:C2
+V	11:32:59.255	Discovering services...
+D	11:32:59.255	gatt.discoverServices()
+I	11:32:59.683	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	11:33:00.082	[Callback] Services discovered with status: 0
+I	11:33:00.082	Services discovered
+V	11:33:00.093	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Server Supported Features [R] (0x2B3A)
+- Client Supported Features [R W] (0x2B29)
+Nordic UART Service (6e400001-b5a3-f393-e0a9-e50e24dcca9e)
+- RX Characteristic [W] (6e400002-b5a3-f393-e0a9-e50e24dcca9e)
+- TX Characteristic [N R] (6e400003-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400004-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400005-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400006-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [W] (6e40000a-b5a3-f393-e0a9-e50e24dcca9e)
+- Unknown Characteristic [W] (6e400008-b5a3-f393-e0a9-e50e24dcca9e)
+- Unknown Characteristic [N R] (6e400009-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400007-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+D	11:33:00.094	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	11:33:00.097	gatt.setCharacteristicNotification(6e400003-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:33:00.099	gatt.setCharacteristicNotification(6e400004-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:33:00.102	gatt.setCharacteristicNotification(6e400005-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:33:00.105	gatt.setCharacteristicNotification(6e400006-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:33:00.106	gatt.setCharacteristicNotification(6e400009-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:33:00.108	gatt.setCharacteristicNotification(6e400007-b5a3-f393-e0a9-e50e24dcca9e, true)
+I	11:33:00.165	Connection parameters updated (interval: 45.0ms, latency: 0, timeout: 5000ms)
+I	11:33:16.791	PHY updated (TX: LE 2M, RX: LE 2M)
+V	11:33:56.915	Writing request to characteristic 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+D	11:33:56.916	gatt.writeCharacteristic(6e40000a-b5a3-f393-e0a9-e50e24dcca9e, value=0x426561676C652C342C302E31)
+I	11:33:57.012	Data written to 6e40000a-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 42-65-61-67-6C-65-2C-34-2C-30-2E-31, "Beagle,4,0.1"
+A	11:33:57.012	"(0x) 42-65-61-67-6C-65-2C-34-2C-30-2E-31, "Beagle,4,0.1"" sent
+V	11:35:07.427	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:35:07.427	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323334)
+I	11:35:07.517	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-34, "11.1234,12.1234"
+A	11:35:07.517	"11.1234,12.1234" sent
+V	11:35:15.403	Writing request to characteristic 6e400002-b5a3-f393-e0a9-e50e24dcca9e
+D	11:35:15.403	gatt.writeCharacteristic(6e400002-b5a3-f393-e0a9-e50e24dcca9e, value=0x31312E313233342C31322E31323332)
+I	11:35:15.479	Data written to 6e400002-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-31-2E-31-32-33-34-2C-31-32-2E-31-32-33-32, "11.1234,12.1232"
+A	11:35:15.479	"11.1234,12.1232" sent
+V	11:38:48.695	Writing request to characteristic 6e400008-b5a3-f393-e0a9-e50e24dcca9e
+D	11:38:48.695	gatt.writeCharacteristic(6e400008-b5a3-f393-e0a9-e50e24dcca9e, value=0x31)
+E	11:39:18.744	Error 133 (0x85): GATT ERROR
+D	11:39:18.748	[Callback] Connection state changed with status: 22 and new state: DISCONNECTED (0)
+E	11:39:18.748	Error 22 (0x16): GATT CONN TERMINATE LOCAL HOST
+I	11:39:18.748	Disconnected
+D	11:39:26.312	gatt.close()
+D	11:39:26.316	wait(200)
+V	11:39:26.521	Connecting to FC:01:2C:D9:36:C2...
+D	11:39:26.521	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, preferred PHY = LE 1M)
+D	11:39:28.002	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	11:39:28.002	Connected to FC:01:2C:D9:36:C2
+V	11:39:28.027	Discovering services...
+D	11:39:28.027	gatt.discoverServices()
+I	11:39:28.480	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	11:39:28.821	[Callback] Services discovered with status: 0
+I	11:39:28.821	Services discovered
+V	11:39:28.830	Generic Access (0x1800)
+- Device Name [R] (0x2A00)
+- Appearance [R] (0x2A01)
+Generic Attribute (0x1801)
+- Service Changed [I] (0x2A05)
+   Client Characteristic Configuration (0x2902)
+- Server Supported Features [R] (0x2B3A)
+- Client Supported Features [R W] (0x2B29)
+Nordic UART Service (6e400001-b5a3-f393-e0a9-e50e24dcca9e)
+- RX Characteristic [W] (6e400002-b5a3-f393-e0a9-e50e24dcca9e)
+- TX Characteristic [N R] (6e400003-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400004-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400005-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400006-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [W] (6e40000a-b5a3-f393-e0a9-e50e24dcca9e)
+- Unknown Characteristic [W] (6e400008-b5a3-f393-e0a9-e50e24dcca9e)
+- Unknown Characteristic [N R] (6e400009-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [N R] (6e400007-b5a3-f393-e0a9-e50e24dcca9e)
+   Client Characteristic Configuration (0x2902)
+D	11:39:28.830	gatt.setCharacteristicNotification(00002a05-0000-1000-8000-00805f9b34fb, true)
+D	11:39:28.835	gatt.setCharacteristicNotification(6e400003-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:39:28.838	gatt.setCharacteristicNotification(6e400004-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:39:28.841	gatt.setCharacteristicNotification(6e400005-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:39:28.844	gatt.setCharacteristicNotification(6e400006-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:39:28.847	gatt.setCharacteristicNotification(6e400009-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:39:28.850	gatt.setCharacteristicNotification(6e400007-b5a3-f393-e0a9-e50e24dcca9e, true)
+I	11:39:28.908	Connection parameters updated (interval: 45.0ms, latency: 0, timeout: 5000ms)
+I	11:39:33.883	PHY updated (TX: LE 2M, RX: LE 2M)
+V	11:39:37.902	Writing request to characteristic 6e400008-b5a3-f393-e0a9-e50e24dcca9e
+D	11:39:37.902	gatt.writeCharacteristic(6e400008-b5a3-f393-e0a9-e50e24dcca9e, value=)
+I	11:39:38.181	Data written to 6e400008-b5a3-f393-e0a9-e50e24dcca9e, value: 0 bytes
+V	11:39:41.909	Enabling notifications for 6e400009-b5a3-f393-e0a9-e50e24dcca9e
+D	11:39:41.909	gatt.setCharacteristicNotification(6e400009-b5a3-f393-e0a9-e50e24dcca9e, true)
+D	11:39:41.913	gatt.writeDescriptor(00002902-0000-1000-8000-00805f9b34fb, value=0x0100)
+I	11:39:42.010	Data written to descr. 00002902-0000-1000-8000-00805f9b34fb, value: (0x) 01-00
+A	11:39:42.010	"Notifications enabled" sent
+V	11:39:42.016	Notifications enabled for 6e400009-b5a3-f393-e0a9-e50e24dcca9e
+V	11:39:44.113	Reading characteristic 6e400009-b5a3-f393-e0a9-e50e24dcca9e
+D	11:39:44.113	gatt.readCharacteristic(6e400009-b5a3-f393-e0a9-e50e24dcca9e)
+I	11:39:45.925	Read Response received from 6e400009-b5a3-f393-e0a9-e50e24dcca9e, value: (0x) 31-37-32-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-33-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-33-2C-30-2E-30-33-2C-2D-30-2E-39-33-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A
+A	11:39:45.925	"(0x) 31-37-32-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-37-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-33-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-38-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-32-39-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-33-2C-30-2E-30-33-2C-2D-30-2E-39-33-0A-31-37-33-30-2C-52-65-73-74-69-6E-67-2C-30-2E-30-34-2C-30-2E-30-33-2C-2D-30-2E-39-34-0A" received
