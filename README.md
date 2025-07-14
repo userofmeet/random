@@ -1,2 +1,2 @@
-# data_logging
-This repo is created as a repo for receiving the offline files stored in a device which have been sent via a prompt for an IoT device. It doesnt contain any codes, just no context logged files for my own purposes
+# RANDOM REPO 
+This repo is created for random purposes and contains everything without any context. It contains the codes for my reference but nothing related with each other
