@@ -1,74 +1,134 @@
 /*
-  Title: LED Control with Push Button Interrupt and State Machine (Internship Task at Ardra Lab)
+ * LED Sequence Controller with Hardware Interrupt 
+ * Based on working code by Meet Jain
+ * 3 LEDs connected to pins 4, 5, 6 (Port D)
+ * Push button connected to pin 2 (INT0) with hardware interrupt
+ * Register level programming for LED control
+ * Hardware debouncing for button
+ */
 
-  Description:
-  This Arduino sketch uses an external push button (on pin 2) to cycle through 
-  different LED states using an interrupt service routine (ISR) for immediate 
-  response. The LEDs are connected to digital pins 4, 5, and 6, and are controlled 
-  via direct port manipulation for faster performance compared to digitalWrite().
+#define LED1_PIN 4   // PD4 (Port D, bit 4)
+#define LED2_PIN 5   // PD5 (Port D, bit 5) 
+#define LED3_PIN 6   // PD6 (Port D, bit 6)
+  
+// Button pin
+#define BUTTON_PIN 2  // PD2 (INT0)
 
-  Functionality:
-  - Pressing the button cycles through the following states:
-      0: All LEDs OFF
-      1: Only LED on pin 4 ON
-      2: Only LED on pin 5 ON
-      3: Only LED on pin 6 ON
-      4: All LEDs ON
-  - After state 4, the sequence loops back to state 1.
-  - Includes a 200 ms software debounce to prevent false triggering.
-  - Uses `attachInterrupt()` on the rising edge of the button signal.
+// Variables for button debouncing and state
+volatile unsigned long lastInterruptTime = 0;
+volatile bool buttonPressed = false;
+const unsigned long debounceDelay = 50; // 50ms debounce delay
 
-  Hardware:
-  - Push button connected to digital pin 2 with proper pull-down or pull-up resistor.
-  - LEDs connected to pins 4, 5, and 6 (through current-limiting resistors).
-
-  Author: Meet Jain
-  Date: 13/08/2025
-*/
-
-volatile uint8_t state = 0;           
-volatile unsigned long last_press = 0; 
+// LED sequence state
+volatile int currentState = 0; // 0=all off, 1=LED1, 2=LED2, 3=LED3, 4=all on
 
 void setup() {
-  // LED on digital pin 4,5,6
-  DDRD |= (1 << PD4) | (1 << PD5) | (1 << PD6); // Configures 4,5,6 pin as output pin
-  PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD6)); // All OFF initially 
-
-  attachInterrupt(digitalPinToInterrupt(2), interrupt_button, RISING); // Push Button on digital pin 2 and LOW to HIGH edge is considered as an interrupt
+  // Initialize serial communication for debugging
+  Serial.begin(9600);
+  
+  // Configure LED pins as outputs using register manipulation
+  // Set bits 4, 5, 6 of DDRD (Data Direction Register D) as outputs
+  DDRD |= (1 << PD4) | (1 << PD5) | (1 << PD6);
+  
+  // Initialize all LEDs to OFF
+  PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD6));
+  
+  // Configure button pin as input with internal pull-up
+  // Set PD2 as input (clear bit in DDRD)
+  DDRD &= ~(1 << PD2);
+  // Enable internal pull-up for PD2
+  PORTD |= (1 << PD2);
+  
+  // Configure external interrupt INT0 (pin 2)
+  // Set interrupt to trigger on falling edge (button press)
+  EICRA |= (1 << ISC01);    // Set ISC01 bit
+  EICRA &= ~(1 << ISC00);   // Clear ISC00 bit (falling edge)
+  
+  // Enable INT0 interrupt
+  EIMSK |= (1 << INT0);
+  
+  // Enable global interrupts
+  sei();
+  
+  Serial.println("LED Sequence Controller Started");
+  Serial.println("Press button to cycle through LED patterns");
+  
+  // Debug: Print initial register values
+  Serial.print("DDRD: 0b");
+  Serial.println(DDRD, BIN);
+  Serial.print("PORTD: 0b");
+  Serial.println(PORTD, BIN);
 }
 
 void loop() {
-  switch (state) {
-    case 0: // All OFF
-      PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD6));
-      break;
+  // Check if button was pressed (with debouncing handled in ISR)
+  if (buttonPressed) {
+    buttonPressed = false;
+    
+    // Move to next state
+    currentState++;
+    if (currentState > 4) {
+      currentState = 1; // Reset to state 1 after state 4
+    }
+    
+    // Update LEDs based on current state
+    updateLEDs();
+    
+    // Print current state for debugging
+    Serial.print("State: ");
+    Serial.println(currentState);
+  }
+  
+  // Small delay to prevent excessive CPU usage
+  delay(10);
+}
 
-    case 1: // LED1 on
-      PORTD = (PORTD & ~((1 << PD5) | (1 << PD6))) | (1 << PD4);
-      break;
-
-    case 2: // LED2 om
-      PORTD = (PORTD & ~((1 << PD4) | (1 << PD6))) | (1 << PD5);
-      break;
-
-    case 3: // LED3 on
-      PORTD = (PORTD & ~((1 << PD4) | (1 << PD5))) | (1 << PD6);
-      break;
-
-    case 4: // All on
-      PORTD |= (1 << PD4) | (1 << PD5) | (1 << PD6);
-      break;
+// External interrupt service routine for INT0 (pin 2)
+ISR(INT0_vect) {
+  unsigned long interruptTime = millis();
+  
+  // Software debouncing - ignore if interrupt occurred too recently
+  if (interruptTime - lastInterruptTime > debounceDelay) {
+    buttonPressed = true;
+    lastInterruptTime = interruptTime;
   }
 }
 
-void interruptbutton() {
-  unsigned long now = millis();
-  // Debounce delay
-  if (now - last_press > 200) { // 200 ms debounce delay
-    last_press = now;
-    state++;
-    if (state > 4) {
-      state = 1; // Restart cycle
-    }
+// Function to update LEDs using the working mechanism from your code
+void updateLEDs() {
+  // Debug: Print state before changes
+  Serial.print("Before - PORTD: 0b");
+  Serial.println(PORTD, BIN);
+  
+  switch (currentState) {
+    case 0: // All LEDs OFF
+      PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD6));
+      Serial.println("All LEDs OFF");
+      break;
+      
+    case 1: // Only LED1 ON (Pin 4)
+      PORTD = (PORTD & ~((1 << PD5) | (1 << PD6))) | (1 << PD4);
+      Serial.println("LED1 ON (Pin 4)");
+      break;
+      
+    case 2: // Only LED2 ON (Pin 5)
+      PORTD = (PORTD & ~((1 << PD4) | (1 << PD6))) | (1 << PD5);
+      Serial.println("LED2 ON (Pin 5)");
+      break;
+      
+    case 3: // Only LED3 ON (Pin 6)
+      PORTD = (PORTD & ~((1 << PD4) | (1 << PD5))) | (1 << PD6);
+      Serial.println("LED3 ON (Pin 6)");
+      break;
+      
+    case 4: // All LEDs ON
+      PORTD |= (1 << PD4) | (1 << PD5) | (1 << PD6);
+      Serial.println("All LEDs ON");
+      break;
   }
+  
+  // Debug: Print state after changes
+  Serial.print("After - PORTD: 0b");
+  Serial.println(PORTD, BIN);
+  Serial.println("---");
 }
