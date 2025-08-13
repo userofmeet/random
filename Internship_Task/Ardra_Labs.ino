@@ -23,36 +23,27 @@ const unsigned long debounceDelay = 50; // 50ms debounce delay
 volatile int currentState = 0; // 0=all off, 1=LED1, 2=LED2, 3=LED3, 4=all on
 
 void setup() {
-  // Initialize serial communication for debugging
   Serial.begin(9600);
-  
-  // Configure LED pins as outputs using register manipulation
-  // Set bits 4, 5, 6 of DDRD (Data Direction Register D) as outputs
+  // Configure LED pins as outputs 
+  // Set bits 4, 5, 6 of DDRD  as outputs
   DDRD |= (1 << PD4) | (1 << PD5) | (1 << PD6);
-  
   // Initialize all LEDs to OFF
   PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD6));
-  
   // Configure button pin as input with internal pull-up
-  // Set PD2 as input (clear bit in DDRD)
+  // Set PD2 as input 
   DDRD &= ~(1 << PD2);
-  // Enable internal pull-up for PD2
+  // internal pull-up for PD2
   PORTD |= (1 << PD2);
-  
   // Configure external interrupt INT0 (pin 2)
-  // Set interrupt to trigger on falling edge (button press)
+  // Set interrupt to trigger on button press
   EICRA |= (1 << ISC01);    // Set ISC01 bit
   EICRA &= ~(1 << ISC00);   // Clear ISC00 bit (falling edge)
-  
   // Enable INT0 interrupt
   EIMSK |= (1 << INT0);
-  
   // Enable global interrupts
   sei();
-  
   Serial.println("LED Sequence Controller Started");
   Serial.println("Press button to cycle through LED patterns");
-  
   // Debug: Print initial register values
   Serial.print("DDRD: 0b");
   Serial.println(DDRD, BIN);
@@ -61,7 +52,7 @@ void setup() {
 }
 
 void loop() {
-  // Check if button was pressed (with debouncing handled in ISR)
+  // Check if button was pressed
   if (buttonPressed) {
     buttonPressed = false;
     
@@ -74,29 +65,27 @@ void loop() {
     // Update LEDs based on current state
     updateLEDs();
     
-    // Print current state for debugging
+    // Print current state 
     Serial.print("State: ");
     Serial.println(currentState);
   }
   
-  // Small delay to prevent excessive CPU usage
+  // Small delay 
   delay(10);
 }
 
 // External interrupt service routine for INT0 (pin 2)
 ISR(INT0_vect) {
   unsigned long interruptTime = millis();
-  
-  // Software debouncing - ignore if interrupt occurred too recently
+
   if (interruptTime - lastInterruptTime > debounceDelay) {
     buttonPressed = true;
     lastInterruptTime = interruptTime;
   }
 }
 
-// Function to update LEDs using the working mechanism from your code
 void updateLEDs() {
-  // Debug: Print state before changes
+  // print state before changes
   Serial.print("Before - PORTD: 0b");
   Serial.println(PORTD, BIN);
   
@@ -127,7 +116,7 @@ void updateLEDs() {
       break;
   }
   
-  // Debug: Print state after changes
+  // Print state after changes
   Serial.print("After - PORTD: 0b");
   Serial.println(PORTD, BIN);
   Serial.println("---");
