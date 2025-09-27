@@ -1,11 +1,16 @@
+import os
 import yt_dlp
+
 def download_audio_from_playlist(playlist_url):
+    download_path = os.path.join(os.path.expanduser("~"), "Downloads", "Songs Downloaded")
+    os.makedirs(download_path, exist_ok=True)
+
     ydl_opts = {
         'format': 'bestaudio/best',
-        'outtmpl': '%(title)s.%(ext)s',
+        'outtmpl': os.path.join(download_path, '%(title)s.%(ext)s'),  
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
-            'preferredcodec': 'mp3',  
+            'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
         'noplaylist': False,
@@ -16,5 +21,5 @@ def download_audio_from_playlist(playlist_url):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([playlist_url])
 
-playlist_link = "https://youtube.com/playlist?list=PLIsj2dWOZHsBk0NrHJmwn10HI6Y2hutui&feature=shared"
+playlist_link = "https://youtube.com/playlist?list=PLIsj2dWOZHsAEzoWYIH5w1-jWkM7soCwU&feature=shared"
 download_audio_from_playlist(playlist_link)
